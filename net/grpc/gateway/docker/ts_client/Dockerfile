@@ -17,13 +17,14 @@ FROM grpcweb/prereqs
 WORKDIR /github/grpc-web/net/grpc/gateway/examples/echo
 
 RUN protoc -I=. echo.proto \
---js_out=import_style=commonjs:./ts-example \
---grpc-web_out=import_style=commonjs+dts,mode=grpcwebtext:./ts-example
+  --js_out=import_style=commonjs:./ts-example \
+  --grpc-web_out=import_style=commonjs+dts,mode=grpcwebtext:./ts-example
 
 WORKDIR /github/grpc-web/net/grpc/gateway/examples/echo/ts-example
 
 RUN npm install && \
   npm link grpc-web && \
+  npm install typescript && \
   npx tsc && \
   # Since typescript@4.5.2, tsc has apparently stopped moving dependent js files into dist/ dir, so
   # we'll move them manually.
