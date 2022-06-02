@@ -14,9 +14,9 @@
 
 FROM grpcweb/prereqs
 
-WORKDIR /github/grpc-web/net/grpc/gateway/examples/echo/node-server
+WORKDIR /github/grpc-web/services/cookieServer
 
-RUN npm install
+RUN yarn install
 
 EXPOSE 9090
 CMD ["node", "server.js"]

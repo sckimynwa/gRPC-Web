@@ -1,8 +1,7 @@
 {
-    "name": "echo-closure-example",
+    "name": "cookieservice",
     "version": "0.1.0",
-    "description": "gRPC-Web Closure JS client example",
-    "license": "Apache-2.0",
+    "description": "gRPC-Web Cookie Service",
     "dependencies": {},
     "devDependencies": {
         "google-closure-compiler": "~20200224.0.0",

@@ -5,7 +5,7 @@
     "strict": true,
     "allowJs": true,
     "outDir": "./dist",
-    "types": ["node"],
+    "types": ["node"]
   },
   "include": [
     "client.ts",
@@ -15,7 +15,5 @@
     "echo_grpc_web_pb.d.ts",
     "EchoServiceClientPb.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }
